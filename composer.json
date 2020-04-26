@@ -27,13 +27,13 @@
         "orchestra/testbench": "^5.0",
         "phpunit/phpunit": "^9.0"
     },
-	"extra": {
-		"laravel": {
-			"providers": [
-				"Elevate\\ServiceProvider"
-			]
-		}
-	},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Elevate\\ServiceProvider"
+            ]
+        }
+    },
     "scripts": {
         "test": "vendor/bin/phpunit"
     },
