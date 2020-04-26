@@ -15,9 +15,7 @@
 
 This package provides a library of macro functions for various Laravel components. Use them to augment the existing functionality offered by the likes of Blade, Collections, Stringable, and so on.
 
-Initially, only a handful of macros are available. That said, the library has been designed so that it can handle dozens or even hundreds of macros being added over time.
-
-Each individual macro may also be disabled, thus ensuring that Laravel isn't spending precious time registering macros you are not using.
+Initially, only a handful of macros are available. That said, the library has been designed so that it can handle dozens or even hundreds of macros being added over time. Each individual macro may also be disabled, thus ensuring that Laravel isn't spending precious time registering macros you are not using.
 
 ## Installation
 
@@ -29,7 +27,7 @@ composer require mattkingshott/elevate
 
 ## Configuration
 
-If you wish to make all of the macros available to your application, then you can skip this section. Otherwise, you should publish the configuration file:
+If you wish to make all of the macros available to your application, then you can skip this section. Otherwise, you should publish the configuration file using Artisan:
 
 ```bash
 php artisan vendor:publish --provider="Elevate\ServiceProvider"
@@ -37,10 +35,10 @@ php artisan vendor:publish --provider="Elevate\ServiceProvider"
 
 You may wish to disable a particular macro for one of the following reasons:
 
-1. Performance - if you aren't using the macro, or even the class itself, then disabling it will net a tiny performance boost.
-2. Conflicts - if you already have a macro for a class, or wish to create one with the same name, you should disable the Elevate macro to prevent conflicts.
+1. **Performance** - if you aren't using the macro, or even the class itself, then disabling it will net a tiny performance boost.
+2. **Conflicts** - if you already have a macro for a class, or wish to create one with the same name, you should disable the Elevate macro to prevent conflicts.
 
-To disable a macro from being registered, simply set its value to `false`:
+To prevent a macro being registered, simply set its value to `false`:
 
 ```php
 'Blade' => [
