@@ -1,0 +1,41 @@
+{
+    "name": "mattkingshott/elevate",
+    "description": "A package that provides a library of macro functions for various Laravel components.",
+    "keywords": [
+        "elevate",
+        "php",
+        "laravel",
+        "macro"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/mattkingshott/elevate",
+    "autoload": {
+        "psr-4": {
+            "Elevate\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Elevate\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": "^7.4"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^5.0",
+        "phpunit/phpunit": "^9.0"
+    },
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Elevate\\ServiceProvider"
+			]
+		}
+	},
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "minimum-stability": "stable"
+}
