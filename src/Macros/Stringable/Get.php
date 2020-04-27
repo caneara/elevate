@@ -13,7 +13,6 @@ class Get
      **/
     public static function register() : void
     {
-        Stringable::macro('get', fn() => $this->__toString());
+        Stringable::macro('get', fn () => $this->__toString());
     }
-
 }

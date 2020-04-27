@@ -23,5 +23,4 @@ class ServiceProvider extends Provider
             }
         }
     }
-
 }

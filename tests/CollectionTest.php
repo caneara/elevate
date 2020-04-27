@@ -4,7 +4,6 @@ namespace Elevate\Tests;
 
 use Elevate\ServiceProvider;
 use Orchestra\Testbench\TestCase;
-use Illuminate\Support\Collection;
 
 class CollectionTest extends TestCase
 {
@@ -28,5 +27,4 @@ class CollectionTest extends TestCase
 
         $this->assertEquals($clean, collect($padded)->trim()->toArray());
     }
-
 }

@@ -13,7 +13,6 @@ class Trim
      **/
     public static function register() : void
     {
-        Collection::macro('trim', fn() => $this->map(fn($value) => trim($value)));
+        Collection::macro('trim', fn () => $this->map(fn ($value) => trim($value)));
     }
-
 }

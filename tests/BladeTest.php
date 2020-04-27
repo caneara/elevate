@@ -39,5 +39,4 @@ class BladeTest extends TestCase
 
         $this->assertEquals($php, Blade::compileString($blade));
     }
-
 }

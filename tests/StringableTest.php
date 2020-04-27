@@ -5,7 +5,6 @@ namespace Elevate\Tests;
 use Illuminate\Support\Str;
 use Elevate\ServiceProvider;
 use Orchestra\Testbench\TestCase;
-use Illuminate\Support\Stringable;
 
 class StringableTest extends TestCase
 {
@@ -26,5 +25,4 @@ class StringableTest extends TestCase
     {
         $this->assertEquals('test', Str::of('test')->get());
     }
-
 }

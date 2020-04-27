@@ -39,5 +39,4 @@ class RegisterTest extends TestCase
         $this->assertNotEquals($blank, Blade::compileString($blank));
         $this->assertEquals('@filled($test) 1 <?php else: ?> 2 @endfilled', Blade::compileString($filled));
     }
-
 }
