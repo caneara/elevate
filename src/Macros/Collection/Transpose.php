@@ -14,7 +14,7 @@ class Transpose
      **/
     public static function register() : void
     {
-        Collection::macro('transpose', function() {
+        Collection::macro('transpose', function () {
             if ($this->isEmpty()) {
                 return new Collection();
             }

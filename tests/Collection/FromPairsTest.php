@@ -2,9 +2,9 @@
 
 namespace Elevate\Tests\Collection;
 
-use Illuminate\Support\Collection;
 use Elevate\ServiceProvider;
 use Orchestra\Testbench\TestCase;
+use Illuminate\Support\Collection;
 
 class FromPairsTest extends TestCase
 {

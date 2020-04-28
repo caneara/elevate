@@ -14,8 +14,7 @@ class ChunkBy
     {
         Collection::macro('chunkBy', function ($callback, bool $preserveKeys = false) {
             return $this->sliceBefore(fn ($item, $prevItem) =>
-                $callback($item) !== $callback($prevItem)
-            , $preserveKeys);
+                $callback($item) !== $callback($prevItem), $preserveKeys);
         });
     }
 }

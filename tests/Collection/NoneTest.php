@@ -2,10 +2,10 @@
 
 namespace Elevate\Tests\Collection;
 
-use Illuminate\Foundation\Application;
-use Illuminate\Support\Collection;
 use Elevate\ServiceProvider;
 use Orchestra\Testbench\TestCase;
+use Illuminate\Support\Collection;
+use Illuminate\Foundation\Application;
 
 class NoneTest extends TestCase
 {

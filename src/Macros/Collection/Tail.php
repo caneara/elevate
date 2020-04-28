@@ -12,7 +12,9 @@ class Tail
      **/
     public static function register() : void
     {
-        Collection::macro('tail', fn($preserveKeys = false) =>
+        Collection::macro(
+            'tail',
+            fn ($preserveKeys = false) =>
             ! $preserveKeys ? $this->slice(1)->values() : $this->slice(1)
         );
     }

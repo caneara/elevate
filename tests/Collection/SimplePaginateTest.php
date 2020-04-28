@@ -2,8 +2,8 @@
 
 namespace Elevate\Tests\Collection;
 
-use Illuminate\Support\Collection;
 use Orchestra\Testbench\TestCase;
+use Illuminate\Support\Collection;
 
 class SimplePaginateTest extends TestCase
 {
@@ -23,15 +23,15 @@ class SimplePaginateTest extends TestCase
         $this->assertFalse($p->hasMorePages());
         $this->assertEquals([2 => 'item3'], $p->items());
         $pageInfo = [
-            'per_page' => 2,
-            'current_page' => 2,
-            'next_page_url' => null,
-            'prev_page_url' => 'http://localhost?page=1',
+            'per_page'       => 2,
+            'current_page'   => 2,
+            'next_page_url'  => null,
+            'prev_page_url'  => 'http://localhost?page=1',
             'first_page_url' => 'http://localhost?page=1',
-            'from' => 3,
-            'to' => 3,
-            'data' => [2 => 'item3'],
-            'path' => 'http://localhost',
+            'from'           => 3,
+            'to'             => 3,
+            'data'           => [2 => 'item3'],
+            'path'           => 'http://localhost',
         ];
         $this->assertEquals($pageInfo, $p->toArray());
     }
@@ -39,16 +39,24 @@ class SimplePaginateTest extends TestCase
     /** @test */
     public function it_removes_trailing_slashes()
     {
-        $p = (new Collection($array = ['item1', 'item2', 'item3']))->simplePaginate(2, 'page', 2,
-            ['path' => 'http://website.com/test/']);
+        $p = (new Collection($array = ['item1', 'item2', 'item3']))->simplePaginate(
+            2,
+            'page',
+            2,
+            ['path' => 'http://website.com/test/']
+        );
         $this->assertEquals('http://website.com/test?page=1', $p->previousPageUrl());
     }
 
     /** @test */
     public function it_generates_urls_without_trailing_slash()
     {
-        $p = (new Collection($array = ['item1', 'item2', 'item3']))->simplePaginate(2, 'page', 2,
-            ['path' => 'http://website.com/test']);
+        $p = (new Collection($array = ['item1', 'item2', 'item3']))->simplePaginate(
+            2,
+            'page',
+            2,
+            ['path' => 'http://website.com/test']
+        );
         $this->assertEquals('http://website.com/test?page=1', $p->previousPageUrl());
     }
 }

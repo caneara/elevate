@@ -2,10 +2,10 @@
 
 namespace Elevate\Tests\Collection;
 
-use Amp\Parallel\Worker\DefaultPool;
-use Illuminate\Support\Collection;
 use Elevate\ServiceProvider;
 use PHPUnit\Framework\TestCase;
+use Illuminate\Support\Collection;
+use Amp\Parallel\Worker\DefaultPool;
 use Symfony\Component\Stopwatch\Stopwatch;
 
 class ParallelMapTest extends TestCase

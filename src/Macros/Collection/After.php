@@ -12,7 +12,7 @@ class After
      **/
     public static function register() : void
     {
-        Collection::macro('after', function($currentItem, $fallback = null) {
+        Collection::macro('after', function ($currentItem, $fallback = null) {
             $currentKey = $this->search($currentItem, true);
 
             if ($currentKey === false) {

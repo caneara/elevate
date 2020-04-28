@@ -13,13 +13,13 @@ class SimplePaginate
      **/
     public static function register() : void
     {
-        Collection::macro('simplePaginate', function($perPage = 15, $pageName = 'page', $page = null, $options = []) {
+        Collection::macro('simplePaginate', function ($perPage = 15, $pageName = 'page', $page = null, $options = []) {
             $page = $page ?: Paginator::resolveCurrentPage($pageName);
 
             $results = $this->slice(($page - 1) * $perPage)->take($perPage + 1);
 
             $options += [
-                'path' => Paginator::resolveCurrentPath(),
+                'path'     => Paginator::resolveCurrentPath(),
                 'pageName' => $pageName,
             ];
 

@@ -2,9 +2,9 @@
 
 namespace Elevate\Tests\Collection;
 
-use Illuminate\Support\Collection;
 use Elevate\ServiceProvider;
 use Orchestra\Testbench\TestCase;
+use Illuminate\Support\Collection;
 
 class PrioritizeTest extends TestCase
 {
@@ -55,23 +55,23 @@ class PrioritizeTest extends TestCase
     {
         $collection = Collection::make([
             [
-                'mfr' => 'Apple',
+                'mfr'  => 'Apple',
                 'name' => 'iPhone Xs',
             ],
             [
-                'mfr' => 'Google',
+                'mfr'  => 'Google',
                 'name' => 'Pixel 3',
             ],
             [
-                'mfr' => 'Microsoft',
+                'mfr'  => 'Microsoft',
                 'name' => 'Lumia 950',
             ],
             [
-                'mfr' => 'OnePlus',
+                'mfr'  => 'OnePlus',
                 'name' => '6T',
             ],
             [
-                'mfr' => 'Samsung',
+                'mfr'  => 'Samsung',
                 'name' => 'Galaxy S9',
             ],
         ])->keyBy('mfr');

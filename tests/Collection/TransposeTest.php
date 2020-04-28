@@ -3,10 +3,10 @@
 namespace Elevate\Tests\Collection;
 
 use ArrayObject;
-use Illuminate\Support\Collection;
 use LengthException;
 use Elevate\ServiceProvider;
 use Orchestra\Testbench\TestCase;
+use Illuminate\Support\Collection;
 
 class TransposeTest extends TestCase
 {
@@ -131,8 +131,8 @@ class TransposeTest extends TestCase
     public function it_will_remove_existing_keys()
     {
         $collection = new Collection([
-            'one' => ['11', '12', '13'],
-            'two' => ['21', '22', '23'],
+            'one'   => ['11', '12', '13'],
+            'two'   => ['21', '22', '23'],
             'three' => ['31', '32', '33'],
         ]);
 

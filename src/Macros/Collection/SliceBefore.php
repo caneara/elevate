@@ -12,7 +12,7 @@ class SliceBefore
      **/
     public static function register() : void
     {
-        Collection::macro('sliceBefore', function($callback, $preserveKeys = false) {
+        Collection::macro('sliceBefore', function ($callback, $preserveKeys = false) {
             if ($this->isEmpty()) {
                 return new Collection();
             }

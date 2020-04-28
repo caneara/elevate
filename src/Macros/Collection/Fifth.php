@@ -12,6 +12,6 @@ class Fifth
      **/
     public static function register() : void
     {
-        Collection::macro('fifth', fn() => $this->get(4));
+        Collection::macro('fifth', fn () => $this->get(4));
     }
 }

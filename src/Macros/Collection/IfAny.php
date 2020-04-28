@@ -12,7 +12,7 @@ class IfAny
      **/
     public static function register() : void
     {
-        Collection::macro('ifAny', function($callback) {
+        Collection::macro('ifAny', function ($callback) {
             if (! $this->isEmpty()) {
                 $callback($this);
             }

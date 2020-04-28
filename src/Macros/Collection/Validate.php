@@ -12,7 +12,7 @@ class Validate
      **/
     public static function register() : void
     {
-        Collection::macro('validate', function($callback) {
+        Collection::macro('validate', function ($callback) {
             if (is_string($callback) || is_array($callback)) {
                 $validationRule = $callback;
 
