@@ -4,7 +4,7 @@ namespace Elevate\Macros\Collection;
 
 use Illuminate\Support\Collection;
 
-class Trim
+class Before
 {
     /**
      * Register the macro.
@@ -12,6 +12,8 @@ class Trim
      **/
     public static function register() : void
     {
-        Collection::macro('trim', fn () => $this->map(fn ($value) => trim($value)));
+        Collection::macro('before', fn($currentItem, $fallback = null) =>
+            $this->reverse()->after($currentItem, $fallback)
+        );
     }
 }

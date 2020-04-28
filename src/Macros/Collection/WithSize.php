@@ -4,7 +4,7 @@ namespace Elevate\Macros\Collection;
 
 use Illuminate\Support\Collection;
 
-class Trim
+class WithSize
 {
     /**
      * Register the macro.
@@ -12,6 +12,12 @@ class Trim
      **/
     public static function register() : void
     {
-        Collection::macro('trim', fn () => $this->map(fn ($value) => trim($value)));
+        Collection::macro('withSize', function($size) {
+            if ($size < 1) {
+                return new Collection();
+            }
+
+            return new Collection(range(1, $size));
+        });
     }
 }

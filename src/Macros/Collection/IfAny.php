@@ -4,7 +4,7 @@ namespace Elevate\Macros\Collection;
 
 use Illuminate\Support\Collection;
 
-class Trim
+class IfAny
 {
     /**
      * Register the macro.
@@ -12,6 +12,12 @@ class Trim
      **/
     public static function register() : void
     {
-        Collection::macro('trim', fn () => $this->map(fn ($value) => trim($value)));
+        Collection::macro('ifAny', function($callback) {
+            if (! $this->isEmpty()) {
+                $callback($this);
+            }
+
+            return $this;
+        });
     }
 }

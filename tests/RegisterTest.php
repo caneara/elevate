@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Blade;
 
 class RegisterTest extends TestCase
 {
-
     /** @test */
     public function it_registers_the_macros()
     {
@@ -18,8 +17,6 @@ class RegisterTest extends TestCase
 
         $this->assertNotEquals($blade, Blade::compileString($blade));
     }
-
-
 
     /** @test */
     public function it_only_registers_the_requested_macros()

@@ -6,7 +6,6 @@ use Illuminate\Support\ServiceProvider as Provider;
 
 class ServiceProvider extends Provider
 {
-
     /**
      * Bootstrap any application services.
      *

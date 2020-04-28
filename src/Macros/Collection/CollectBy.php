@@ -4,7 +4,7 @@ namespace Elevate\Macros\Collection;
 
 use Illuminate\Support\Collection;
 
-class Trim
+class CollectBy
 {
     /**
      * Register the macro.
@@ -12,6 +12,6 @@ class Trim
      **/
     public static function register() : void
     {
-        Collection::macro('trim', fn () => $this->map(fn ($value) => trim($value)));
+        Collection::macro('collectBy', fn ($key, $default = null) => new Collection($this->get($key, $default)));
     }
 }

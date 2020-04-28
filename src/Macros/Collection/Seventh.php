@@ -1,10 +1,10 @@
 <?php declare(strict_types = 1);
 
-namespace Elevate\Macros\Stringable;
+namespace Elevate\Macros\Collection;
 
-use Illuminate\Support\Stringable;
+use Illuminate\Support\Collection;
 
-class Get
+class Seventh
 {
     /**
      * Register the macro.
@@ -12,6 +12,6 @@ class Get
      **/
     public static function register() : void
     {
-        Stringable::macro('get', fn () => $this->__toString());
+        Collection::macro('seventh', fn() => $this->get(6));
     }
 }

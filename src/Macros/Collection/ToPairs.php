@@ -4,7 +4,7 @@ namespace Elevate\Macros\Collection;
 
 use Illuminate\Support\Collection;
 
-class Trim
+class ToPairs
 {
     /**
      * Register the macro.
@@ -12,6 +12,6 @@ class Trim
      **/
     public static function register() : void
     {
-        Collection::macro('trim', fn () => $this->map(fn ($value) => trim($value)));
+        Collection::macro('toPairs', fn() => $this->keys()->map(fn ($key) => [$key, $this->items[$key]]));
     }
 }

@@ -4,7 +4,7 @@ namespace Elevate\Macros\Collection;
 
 use Illuminate\Support\Collection;
 
-class Trim
+class Tail
 {
     /**
      * Register the macro.
@@ -12,6 +12,8 @@ class Trim
      **/
     public static function register() : void
     {
-        Collection::macro('trim', fn () => $this->map(fn ($value) => trim($value)));
+        Collection::macro('tail', fn($preserveKeys = false) =>
+            ! $preserveKeys ? $this->slice(1)->values() : $this->slice(1)
+        );
     }
 }

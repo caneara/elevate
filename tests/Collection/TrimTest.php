@@ -1,14 +1,12 @@
 <?php declare(strict_types = 1);
 
-namespace Elevate\Tests;
+namespace Elevate\Tests\Collection;
 
-use Illuminate\Support\Str;
 use Elevate\ServiceProvider;
 use Orchestra\Testbench\TestCase;
 
-class StringableTest extends TestCase
+class TrimTest extends TestCase
 {
-
     /**
      * Register the service providers.
      *
@@ -18,11 +16,12 @@ class StringableTest extends TestCase
         return [ServiceProvider::class];
     }
 
-
-
     /** @test */
-    public function it_verifies_the_get_macro()
+    public function it_verifies_the_macro()
     {
-        $this->assertEquals('test', Str::of('test')->get());
+        $padded = [' one', 'two ', ' three '];
+        $clean  = ['one', 'two', 'three'];
+
+        $this->assertEquals($clean, collect($padded)->trim()->toArray());
     }
 }

@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Blade;
 
 class Blank
 {
-
     /**
      * Register the macro.
      *
