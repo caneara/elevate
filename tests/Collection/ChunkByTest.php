@@ -2,9 +2,9 @@
 
 namespace Elevate\Tests\Collection;
 
-use Illuminate\Support\Collection;
 use Elevate\ServiceProvider;
 use Orchestra\Testbench\TestCase;
+use Illuminate\Support\Collection;
 
 class ChunkByTest extends TestCase
 {
@@ -74,9 +74,9 @@ class ChunkByTest extends TestCase
 
         $expected = [
             [0 => 'A', 1 => 'A', 2 => 'A'],
-            [3 => 'B', 4 => 'B'],
-            [5 => 'A', 6 => 'A'],
-            [7 => 'C', 8 => 'B', 9 => 'B'],
+            [3  => 'B', 4 => 'B'],
+            [5  => 'A', 6 => 'A'],
+            [7  => 'C', 8 => 'B', 9 => 'B'],
             [10 => 'A'],
         ];
 

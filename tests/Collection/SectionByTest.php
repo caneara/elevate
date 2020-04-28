@@ -2,9 +2,9 @@
 
 namespace Elevate\Tests\Collection;
 
-use Illuminate\Support\Collection;
 use Elevate\ServiceProvider;
 use Orchestra\Testbench\TestCase;
+use Illuminate\Support\Collection;
 
 class SectionByTest extends TestCase
 {
@@ -54,21 +54,21 @@ class SectionByTest extends TestCase
         $expected = [
             [
                 'section' => 'Basics',
-                'items' => [
+                'items'   => [
                     ['name' => 'Lesson 1', 'module' => 'Basics'],
                     ['name' => 'Lesson 2', 'module' => 'Basics'],
                 ],
             ],
             [
                 'section' => 'Advanced',
-                'items' => [
+                'items'   => [
                     ['name' => 'Lesson 3', 'module' => 'Advanced'],
                     ['name' => 'Lesson 4', 'module' => 'Advanced'],
                 ],
             ],
             [
                 'section' => 'Basics',
-                'items' => [
+                'items'   => [
                     ['name' => 'Lesson 5', 'module' => 'Basics'],
                 ],
             ],
@@ -91,21 +91,21 @@ class SectionByTest extends TestCase
         $expected = [
             [
                 'module' => 'Basics',
-                'items' => [
+                'items'  => [
                     'lesson1' => ['name' => 'Lesson 1', 'module' => 'Basics'],
                     'lesson2' => ['name' => 'Lesson 2', 'module' => 'Basics'],
                 ],
             ],
             [
                 'module' => 'Advanced',
-                'items' => [
+                'items'  => [
                     'lesson3' => ['name' => 'Lesson 3', 'module' => 'Advanced'],
                     'lesson4' => ['name' => 'Lesson 4', 'module' => 'Advanced'],
                 ],
             ],
             [
                 'module' => 'Basics',
-                'items' => [
+                'items'  => [
                     'lesson5' => ['name' => 'Lesson 5', 'module' => 'Basics'],
                 ],
             ],

@@ -12,7 +12,7 @@ class SectionBy
      **/
     public static function register() : void
     {
-        Collection::macro('sectionBy', function($key, $preserveKeys = false, $sectionKey = 0, $itemsKey = 1) {
+        Collection::macro('sectionBy', function ($key, $preserveKeys = false, $sectionKey = 0, $itemsKey = 1) {
             $sectionNameRetriever = $this->valueRetriever($key);
 
             $results = new Collection();
@@ -23,7 +23,7 @@ class SectionBy
                 if (! $results->last() || $results->last()->get($sectionKey) !== $sectionName) {
                     $results->push(new Collection([
                         $sectionKey => $sectionName,
-                        $itemsKey => new Collection(),
+                        $itemsKey   => new Collection(),
                     ]));
                 }
 

@@ -53,9 +53,9 @@ The following macros are currently available:
 
 | Macro          | Class      | Description
 | -------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------
-| filled         | Blade      | Enables the use of @filled() and @endfilled. Uses the filled() global helper under the hood. You may also use @else e.g. @filled() @else @endfilled.
-| blank          | Blade      | Enables the use of @blank() and @endblank. Uses the blank() global helper under the hood. You may also use @else e.g. @blank() @else @endblank.
-| get            | Stringable | Adds a more friendly helper to access a fluent string's content e.g. Str::of('test')->get() // test
+| filled         | Blade      | Enables the use of @filled() and @endfilled. Uses the filled() global helper under the hood. You may also use @else e.g. @filled() @else @endfilled
+| blank          | Blade      | Enables the use of @blank() and @endblank. Uses the blank() global helper under the hood. You may also use @else e.g. @blank() @else @endblank
+| get            | Stringable | Adds a more friendly helper to access a fluent string's content e.g. Str::of('test')->get()
 | after          | Collection | Get the next item from the collection
 | at             | Collection | Retrieve an item at an index
 | second         | Collection | Retrieve item at the second index

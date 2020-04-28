@@ -2,10 +2,10 @@
 
 namespace Elevate\Tests\Collection;
 
-use Illuminate\Support\Collection;
-use Elevate\Exceptions\CollectionItemNotFound;
 use Elevate\ServiceProvider;
 use Orchestra\Testbench\TestCase;
+use Illuminate\Support\Collection;
+use Elevate\Exceptions\CollectionItemNotFound;
 
 class FirstOrFailTest extends TestCase
 {

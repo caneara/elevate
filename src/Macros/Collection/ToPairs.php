@@ -12,6 +12,6 @@ class ToPairs
      **/
     public static function register() : void
     {
-        Collection::macro('toPairs', fn() => $this->keys()->map(fn ($key) => [$key, $this->items[$key]]));
+        Collection::macro('toPairs', fn () => $this->keys()->map(fn ($key) => [$key, $this->items[$key]]));
     }
 }

@@ -12,7 +12,7 @@ class Prioritize
      **/
     public static function register() : void
     {
-        Collection::macro('prioritize', function($callable) {
+        Collection::macro('prioritize', function ($callable) {
             $nonPrioritized = $this->reject($callable);
 
             return $this

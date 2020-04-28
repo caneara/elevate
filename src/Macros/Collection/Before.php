@@ -12,7 +12,9 @@ class Before
      **/
     public static function register() : void
     {
-        Collection::macro('before', fn($currentItem, $fallback = null) =>
+        Collection::macro(
+            'before',
+            fn ($currentItem, $fallback = null) =>
             $this->reverse()->after($currentItem, $fallback)
         );
     }

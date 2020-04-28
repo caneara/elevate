@@ -2,9 +2,9 @@
 
 namespace Elevate\Tests\Collection;
 
-use Illuminate\Support\Collection;
 use Elevate\ServiceProvider;
 use Orchestra\Testbench\TestCase;
+use Illuminate\Support\Collection;
 
 class ExtractTest extends TestCase
 {
@@ -25,9 +25,9 @@ class ExtractTest extends TestCase
         parent::setUp();
 
         $this->user = collect([
-            'name' => 'Sebastian',
+            'name'    => 'Sebastian',
             'company' => 'Spatie',
-            'role' => [
+            'role'    => [
                 'name' => 'Developer',
             ],
         ]);

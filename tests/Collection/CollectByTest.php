@@ -2,9 +2,9 @@
 
 namespace Elevate\Tests\Collection;
 
-use Illuminate\Support\Collection;
 use Elevate\ServiceProvider;
 use Orchestra\Testbench\TestCase;
+use Illuminate\Support\Collection;
 
 class CollectByTest extends TestCase
 {
@@ -21,7 +21,7 @@ class CollectByTest extends TestCase
     public function it_returns_a_collection_containing_the_collected_items()
     {
         $collection = new Collection([
-            'name' => 'taco',
+            'name'        => 'taco',
             'ingredients' => [
                 'cheese',
                 'lettuce',
@@ -47,7 +47,7 @@ class CollectByTest extends TestCase
     public function it_returns_default_when_key_is_missing()
     {
         $collection = new Collection([
-            'name' => 'taco',
+            'name'        => 'taco',
             'ingredients' => [
                 'cheese',
                 'lettuce',
@@ -66,7 +66,7 @@ class CollectByTest extends TestCase
     public function it_returns_empty_collection_when_missing_key_without_default()
     {
         $collection = new Collection([
-            'name' => 'taco',
+            'name'        => 'taco',
             'ingredients' => [
                 'cheese',
                 'lettuce',

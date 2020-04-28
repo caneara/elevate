@@ -12,7 +12,7 @@ class IfEmpty
      **/
     public static function register() : void
     {
-        Collection::macro('ifEmpty', function($callback) {
+        Collection::macro('ifEmpty', function ($callback) {
             if ($this->isEmpty()) {
                 $callback($this);
             }

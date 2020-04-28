@@ -2,9 +2,9 @@
 
 namespace Elevate\Tests\Collection;
 
-use Illuminate\Support\Collection;
 use Elevate\ServiceProvider;
 use Orchestra\Testbench\TestCase;
+use Illuminate\Support\Collection;
 
 class TailTest extends TestCase
 {
@@ -72,15 +72,15 @@ class TailTest extends TestCase
         $tail = $collection->tail(true);
 
         $expected = [
-            1 => 34,
-            2 => 51,
-            3 => 17,
-            4 => 47,
-            5 => 64,
-            6 => 9,
-            7 => 44,
-            8 => 20,
-            9 => 59,
+            1  => 34,
+            2  => 51,
+            3  => 17,
+            4  => 47,
+            5  => 64,
+            6  => 9,
+            7  => 44,
+            8  => 20,
+            9  => 59,
             10 => 66,
             11 => 77,
         ];

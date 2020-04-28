@@ -12,7 +12,7 @@ class FromPairs
      **/
     public static function register() : void
     {
-        Collection::macro('fromPairs', function() {
+        Collection::macro('fromPairs', function () {
             return $this->reduce(function ($assoc, $keyValuePair) {
                 [$key, $value] = $keyValuePair;
                 $assoc[$key] = $value;

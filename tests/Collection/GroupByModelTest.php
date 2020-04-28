@@ -2,11 +2,11 @@
 
 namespace Elevate\Tests\Collection;
 
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Collection;
 use Mockery;
 use Elevate\ServiceProvider;
 use Orchestra\Testbench\TestCase;
+use Illuminate\Support\Collection;
+use Illuminate\Database\Eloquent\Model;
 
 class GroupByModelTest extends TestCase
 {
@@ -142,14 +142,14 @@ class GroupByModelTest extends TestCase
 
         $expected = [
             [
-                'model' => $model1,
+                'model'   => $model1,
                 'myItems' => [
                     ['model' => $model1, 'foo' => 'bar'],
                     ['model' => $model1, 'foo' => 'baz'],
                 ],
             ],
             [
-                'model' => $model2,
+                'model'   => $model2,
                 'myItems' => [
                     ['model' => $model2, 'foo' => 'qux'],
                 ],
