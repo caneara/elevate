@@ -12,7 +12,9 @@ class TransformKeys
      **/
     public static function register() : void
     {
-        Collection::macro('transformKeys', fn ($operation) =>
+        Collection::macro(
+            'transformKeys',
+            fn ($operation) =>
             collect($this->items)->mapWithKeys(fn ($item, $key) => [$operation($key) => $item])
         );
     }

@@ -13,7 +13,9 @@ class Carbonize
      **/
     public static function register() : void
     {
-        Collection::macro('carbonize', fn () =>
+        Collection::macro(
+            'carbonize',
+            fn ()                                 =>
             collect($this->items)->map(fn ($time) => new CarbonImmutable($time))
         );
     }
