@@ -68,6 +68,7 @@ The following macros are currently available:
 | ninth          | Collection | Retrieve item at the ninth index
 | tenth          | Collection | Retrieve item at the tenth index
 | before         | Collection | Get the previous item from the collection
+| carbonize      | Collection | Convert all collection items into instances of CarbonImmutable
 | chunkBy        | Collection | Chunks the values from a collection into groups as long the given callback is true
 | collectBy      | Collection | Get an item at a given key, and collect it
 | eachCons       | Collection | Get the following consecutive neighbours in a collection from a given chunk size
@@ -91,6 +92,7 @@ The following macros are currently available:
 | sliceBefore    | Collection | Slice the values out from a collection before the given callback is true
 | tail           | Collection | Extract the tail from a collection (everything except the first element)
 | toPairs        | Collection | Transform a collection into an array with pairs
+| transformKeys  | Collection | Performs a transform operation, but on the collection's keys instead of its values
 | transpose      | Collection | Rotate a multidimensional array, turning the rows into columns and the columns into rows
 | trim           | Collection | Maps over each item in the collection and calls PHP's trim() method on it
 | validate       | Collection | Returns true if the given callback returns true for every item
@@ -109,6 +111,7 @@ If you'd like to support the development of Elevate, then please consider [spons
 The library includes macros obtained from the following open-source packages:
 
 * [Laravel Collection Macros](https://github.com/spatie/laravel-collection-macros) by [Spatie](https://spatie.be)
+* [Laravel Helpers](https://github.com/sebastiaanluca/laravel-helpers) by [sebastiaanluca](https://github.com/sebastiaanluca)
 
 ## License
 
