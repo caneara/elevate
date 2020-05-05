@@ -55,7 +55,12 @@ return [
 
     // Stringable
     'Stringable' => [
-        'Get' => true,
+        'Get'        => true,
+        'PadLeft'    => true,
+        'PadRight'   => true,
+        'Possessive' => true,
+        'Segment'    => true,
+        'Toggle'     => true,
     ],
 
 ];

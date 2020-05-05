@@ -56,6 +56,11 @@ The following macros are currently available:
 | filled         | Blade      | Enables the use of @filled() and @endfilled. Uses the filled() global helper under the hood. You may also use @else e.g. @filled() @else @endfilled
 | blank          | Blade      | Enables the use of @blank() and @endblank. Uses the blank() global helper under the hood. You may also use @else e.g. @blank() @else @endblank
 | get            | Stringable | Adds a more friendly helper to access a fluent string's content e.g. Str::of('test')->get()
+| padLeft        | Stringable | Pad the string to the given length from the left side
+| padRight       | Stringable | Pad the string to the given length from the right side
+| possessive     | Stringable | Converts the string to a possessive version e.g. Bob -> Bob's
+| segment        | Stringable | Splits the string using the given delimiter, then retrieves the item at the given array index
+| toggle         | Stringable | Toggles the string between two states. Contains a $loose flag to allow the switching of a string that matches neither states
 | after          | Collection | Get the next item from the collection
 | at             | Collection | Retrieve an item at an index
 | second         | Collection | Retrieve item at the second index
@@ -108,10 +113,13 @@ If you'd like to support the development of Elevate, then please consider [spons
 
 ## Credits
 
-The library includes macros obtained from the following open-source packages:
+The library includes macros and / or code obtained from the following open-source packages:
 
 * [Laravel Collection Macros](https://github.com/spatie/laravel-collection-macros) by [Spatie](https://spatie.be)
 * [Laravel Helpers](https://github.com/sebastiaanluca/laravel-helpers) by [sebastiaanluca](https://github.com/sebastiaanluca)
+* [String Library](https://github.com/spatie/string) by [Spatie](https://spatie.be)
+* [Underscore Library](https://github.com/Anahkiasen/underscore-php) by [Emma Fabre](https://autopergamene.eu)
+* [Nette Utilities](https://github.com/nette/utils) by [Nette Foundation](https://nette.org)
 
 ## License
 
