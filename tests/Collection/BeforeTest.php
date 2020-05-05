@@ -54,7 +54,7 @@ class BeforeTest extends TestCase
     {
         $data = new Collection([3, 1, 2]);
 
-        $result = $data->before(function ($item) {
+        $result = $data->before(function($item) {
             return $item < 2;
         });
 

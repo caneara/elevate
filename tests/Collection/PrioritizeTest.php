@@ -26,7 +26,7 @@ class PrioritizeTest extends TestCase
             ['id' => 3],
         ]);
 
-        $prioritized = $collection->prioritize(function (array $item) {
+        $prioritized = $collection->prioritize(function(array $item) {
             return $item['id'] === 2;
         });
 
@@ -43,7 +43,7 @@ class PrioritizeTest extends TestCase
             ['id' => 4],
         ]);
 
-        $prioritized = $collection->prioritize(function (array $item) {
+        $prioritized = $collection->prioritize(function(array $item) {
             return in_array($item['id'], [2, 4]);
         });
 
@@ -76,7 +76,7 @@ class PrioritizeTest extends TestCase
             ],
         ])->keyBy('mfr');
 
-        $prioritized = $collection->prioritize(function ($phones, $mfr) {
+        $prioritized = $collection->prioritize(function($phones, $mfr) {
             return in_array($mfr, ['OnePlus', 'Samsung']);
         });
         $this->assertEquals(['OnePlus', 'Samsung', 'Apple', 'Google', 'Microsoft'], $prioritized->keys()->toArray());

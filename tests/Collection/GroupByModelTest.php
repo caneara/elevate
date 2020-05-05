@@ -34,7 +34,7 @@ class GroupByModelTest extends TestCase
             ]],
         ];
 
-        $grouped = $collection->groupByModel(function ($item) {
+        $grouped = $collection->groupByModel(function($item) {
             return $item['model'];
         });
 
@@ -51,7 +51,7 @@ class GroupByModelTest extends TestCase
     {
         [$model1, $model2, $collection] = $this->getDummies();
 
-        $grouped = $collection->groupByModel(function ($item) {
+        $grouped = $collection->groupByModel(function($item) {
             return $item['model'];
         }, false, 'myKey', 'items');
 
@@ -71,7 +71,7 @@ class GroupByModelTest extends TestCase
             ],
         ];
 
-        $this->assertEquals($expected, $grouped->map(function ($group) {
+        $this->assertEquals($expected, $grouped->map(function($group) {
             $group['items'] = $group['items']->toArray();
 
             return $group;
@@ -126,7 +126,7 @@ class GroupByModelTest extends TestCase
             ],
         ];
 
-        $this->assertEquals($expected, $grouped->map(function ($group) {
+        $this->assertEquals($expected, $grouped->map(function($group) {
             $group['items'] = $group['items']->toArray();
 
             return $group;
@@ -156,7 +156,7 @@ class GroupByModelTest extends TestCase
             ],
         ];
 
-        $this->assertEquals($expected, $grouped->map(function ($group) {
+        $this->assertEquals($expected, $grouped->map(function($group) {
             $group['myItems'] = $group['myItems']->toArray();
 
             return $group;
@@ -186,7 +186,7 @@ class GroupByModelTest extends TestCase
             ],
         ];
 
-        $this->assertEquals($expected, $grouped->map(function ($group) {
+        $this->assertEquals($expected, $grouped->map(function($group) {
             $group['items'] = $group['items']->toArray();
 
             return $group;

@@ -14,7 +14,7 @@ class Before
     {
         Collection::macro(
             'before',
-            fn ($currentItem, $fallback = null) =>
+            fn($currentItem, $fallback = null) =>
             $this->reverse()->after($currentItem, $fallback)
         );
     }

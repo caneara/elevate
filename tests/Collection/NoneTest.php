@@ -38,11 +38,11 @@ class NoneTest extends TestCase
         // Below Laravel 5.3, the callable's parameter order is `$key, $value`.
 
         if (version_compare(Application::VERSION, '5.3.0', 'lt')) {
-            $this->assertTrue(Collection::make(['name' => 'foo'])->none(function ($key, $value) {
+            $this->assertTrue(Collection::make(['name' => 'foo'])->none(function($key, $value) {
                 return $key === 'name' && $value === 'bar';
             }));
 
-            $this->assertFalse(Collection::make(['name' => 'foo'])->none(function ($key, $value) {
+            $this->assertFalse(Collection::make(['name' => 'foo'])->none(function($key, $value) {
                 return $key === 'name' && $value === 'foo';
             }));
 
@@ -51,11 +51,11 @@ class NoneTest extends TestCase
 
         // Above Laravel 5.3, the callable's parameter order is `$value, $key`.
 
-        $this->assertTrue(Collection::make(['name' => 'foo'])->none(function ($value, $key) {
+        $this->assertTrue(Collection::make(['name' => 'foo'])->none(function($value, $key) {
             return $key === 'name' && $value === 'bar';
         }));
 
-        $this->assertFalse(Collection::make(['name' => 'foo'])->none(function ($value, $key) {
+        $this->assertFalse(Collection::make(['name' => 'foo'])->none(function($value, $key) {
             return $key === 'name' && $value === 'foo';
         }));
     }

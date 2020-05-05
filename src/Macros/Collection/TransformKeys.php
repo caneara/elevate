@@ -14,8 +14,8 @@ class TransformKeys
     {
         Collection::macro(
             'transformKeys',
-            fn ($operation) =>
-            collect($this->items)->mapWithKeys(fn ($item, $key) => [$operation($key) => $item])
+            fn($operation) =>
+            collect($this->items)->mapWithKeys(fn($item, $key) => [$operation($key) => $item])
         );
     }
 }

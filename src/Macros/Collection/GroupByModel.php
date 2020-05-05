@@ -12,12 +12,12 @@ class GroupByModel
      **/
     public static function register() : void
     {
-        Collection::macro('groupByModel', function ($callback, $preserveKeys = false, $modelKey = 0, $itemsKey = 1) {
+        Collection::macro('groupByModel', function($callback, $preserveKeys = false, $modelKey = 0, $itemsKey = 1) {
             $callback = $this->valueRetriever($callback);
 
-            return $this->groupBy(function ($item) use ($callback) {
+            return $this->groupBy(function($item) use ($callback) {
                 return $callback($item)->getKey();
-            }, $preserveKeys)->map(function ($items) use ($callback, $modelKey, $itemsKey) {
+            }, $preserveKeys)->map(function($items) use ($callback, $modelKey, $itemsKey) {
                 return [
                     $modelKey => $callback($items->first()),
                     $itemsKey => $items,

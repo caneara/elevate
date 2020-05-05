@@ -12,7 +12,7 @@ class SliceBefore
      **/
     public static function register() : void
     {
-        Collection::macro('sliceBefore', function ($callback, $preserveKeys = false) {
+        Collection::macro('sliceBefore', function($callback, $preserveKeys = false) {
             if ($this->isEmpty()) {
                 return new Collection();
             }
@@ -22,7 +22,7 @@ class SliceBefore
                     new Collection([$this->first()]),
                 ]);
 
-                return $this->eachCons(2)->reduce(function ($sliced, $previousAndCurrent) use ($callback) {
+                return $this->eachCons(2)->reduce(function($sliced, $previousAndCurrent) use ($callback) {
                     [$previousItem, $item] = $previousAndCurrent;
 
                     $callback($item, $previousItem)
@@ -35,7 +35,7 @@ class SliceBefore
 
             $sliced = new Collection([$this->take(1)]);
 
-            return $this->eachCons(2, $preserveKeys)->reduce(function ($sliced, $previousAndCurrent) use ($callback) {
+            return $this->eachCons(2, $preserveKeys)->reduce(function($sliced, $previousAndCurrent) use ($callback) {
                 $previousItem = $previousAndCurrent->take(1);
                 $item = $previousAndCurrent->take(-1);
 

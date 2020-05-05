@@ -12,6 +12,6 @@ class FilterMap
      **/
     public static function register() : void
     {
-        Collection::macro('filterMap', fn ($callback) => $this->map($callback)->filter());
+        Collection::macro('filterMap', fn($callback) => $this->map($callback)->filter());
     }
 }

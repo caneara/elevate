@@ -16,7 +16,7 @@ class ParallelMap
      **/
     public static function register() : void
     {
-        Collection::macro('parallelMap', function ($callback, $workers = null) {
+        Collection::macro('parallelMap', function($callback, $workers = null) {
             $pool = null;
 
             if ($workers instanceof Pool) {

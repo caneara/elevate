@@ -13,7 +13,7 @@ class Paginate
      **/
     public static function register() : void
     {
-        Collection::macro('paginate', function ($perPage = 15, $pageName = 'page', $page = null, $total = null, $options = []) {
+        Collection::macro('paginate', function($perPage = 15, $pageName = 'page', $page = null, $total = null, $options = []) {
             $page = $page ?: LengthAwarePaginator::resolveCurrentPage($pageName);
 
             $results = $this->forPage($page, $perPage)->values();

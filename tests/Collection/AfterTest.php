@@ -54,7 +54,7 @@ class AfterTest extends TestCase
     {
         $data = new Collection([3, 1, 2]);
 
-        $result = $data->after(function ($item) {
+        $result = $data->after(function($item) {
             return $item > 2;
         });
 

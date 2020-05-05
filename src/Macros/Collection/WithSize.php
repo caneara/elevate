@@ -12,7 +12,7 @@ class WithSize
      **/
     public static function register() : void
     {
-        Collection::macro('withSize', function ($size) {
+        Collection::macro('withSize', function($size) {
             if ($size < 1) {
                 return new Collection();
             }

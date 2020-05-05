@@ -28,7 +28,7 @@ class ChunkByTest extends TestCase
     {
         $collection = new Collection(['A', 'A', 'A', 'B', 'B', 'A', 'A', 'C', 'B', 'B', 'A']);
 
-        $chunkedBy = $collection->chunkBy(function ($item) {
+        $chunkedBy = $collection->chunkBy(function($item) {
             return $item == 'A';
         });
 
@@ -48,7 +48,7 @@ class ChunkByTest extends TestCase
     {
         $collection = new Collection(['a' => 'A', 'b' => 'A', 'c' => 'A', 'd' => 'B', 'e' => 'B', 'f' => 'A', 'g' => 'A', 'h' => 'C', 'i' => 'B', 'j' => 'B', 'k' => 'A']);
 
-        $chunkedBy = $collection->chunkBy(function ($item) {
+        $chunkedBy = $collection->chunkBy(function($item) {
             return $item == 'A';
         });
 
@@ -68,7 +68,7 @@ class ChunkByTest extends TestCase
     {
         $collection = new Collection(['A', 'A', 'A', 'B', 'B', 'A', 'A', 'C', 'B', 'B', 'A']);
 
-        $chunkedBy = $collection->chunkBy(function ($item) {
+        $chunkedBy = $collection->chunkBy(function($item) {
             return $item == 'A';
         }, true);
 
@@ -88,7 +88,7 @@ class ChunkByTest extends TestCase
     {
         $collection = new Collection(['a' => 'A', 'b' => 'A', 'c' => 'A', 'd' => 'B', 'e' => 'B', 'f' => 'A', 'g' => 'A', 'h' => 'C', 'i' => 'B', 'j' => 'B', 'k' => 'A']);
 
-        $chunkedBy = $collection->chunkBy(function ($item) {
+        $chunkedBy = $collection->chunkBy(function($item) {
             return $item == 'A';
         }, true);
 

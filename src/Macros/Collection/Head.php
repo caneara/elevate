@@ -12,6 +12,6 @@ class Head
      **/
     public static function register() : void
     {
-        Collection::macro('head', fn () => $this->first());
+        Collection::macro('head', fn() => $this->first());
     }
 }

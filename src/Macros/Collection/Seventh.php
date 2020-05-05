@@ -12,6 +12,6 @@ class Seventh
      **/
     public static function register() : void
     {
-        Collection::macro('seventh', fn () => $this->get(6));
+        Collection::macro('seventh', fn() => $this->get(6));
     }
 }

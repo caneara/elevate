@@ -28,7 +28,7 @@ class SliceBeforeTest extends TestCase
     {
         $collection = new Collection([10, 34, 51, 17, 47, 64, 9, 44, 20, 59, 66, 77]);
 
-        $sliced = $collection->sliceBefore(function ($number) {
+        $sliced = $collection->sliceBefore(function($number) {
             return $number > 50;
         });
 
@@ -49,7 +49,7 @@ class SliceBeforeTest extends TestCase
     {
         $collection = new Collection([10, 34, 51, 17, 47, 64, 9, 44, 20, 59, 66, 77]);
 
-        $sliced = $collection->sliceBefore(function ($number) {
+        $sliced = $collection->sliceBefore(function($number) {
             return $number > 50;
         }, true);
 
@@ -71,7 +71,7 @@ class SliceBeforeTest extends TestCase
     {
         $collection = new Collection([10, [34, 51], [17], 47, [64, 9], 44, [20], [59], [66], 77]);
 
-        $sliced = $collection->sliceBefore(function ($item) {
+        $sliced = $collection->sliceBefore(function($item) {
             return is_array($item);
         });
 
@@ -93,7 +93,7 @@ class SliceBeforeTest extends TestCase
     {
         $collection = new Collection([10, [34, 51], [17], 47, [64, 9], 44, [20], [59], [66], 77]);
 
-        $sliced = $collection->sliceBefore(function ($item) {
+        $sliced = $collection->sliceBefore(function($item) {
             return is_array($item);
         }, true);
 
@@ -115,7 +115,7 @@ class SliceBeforeTest extends TestCase
     {
         $collection = new Collection(['a' => 10, 'b' => 34, 'c' => 51, 'd' => 17, 'e' => 47, 'f' => 64, 'g' => 9, 'h' => 44, 'i' => 20, 'j' => 59, 'k' => 66, 'l' => 77]);
 
-        $sliced = $collection->sliceBefore(function ($number) {
+        $sliced = $collection->sliceBefore(function($number) {
             return $number > 50;
         });
 
@@ -136,7 +136,7 @@ class SliceBeforeTest extends TestCase
     {
         $collection = new Collection(['a' => 10, 'b' => 34, 'c' => 51, 'd' => 17, 'e' => 47, 'f' => 64, 'g' => 9, 'h' => 44, 'i' => 20, 'j' => 59, 'k' => 66, 'l' => 77]);
 
-        $sliced = $collection->sliceBefore(function ($number) {
+        $sliced = $collection->sliceBefore(function($number) {
             return $number > 50;
         }, true);
 

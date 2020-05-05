@@ -12,6 +12,6 @@ class Tenth
      **/
     public static function register() : void
     {
-        Collection::macro('tenth', fn () => $this->get(9));
+        Collection::macro('tenth', fn() => $this->get(9));
     }
 }

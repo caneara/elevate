@@ -12,6 +12,6 @@ class At
      **/
     public static function register() : void
     {
-        Collection::macro('at', fn ($index) => $this->slice($index, 1)->first());
+        Collection::macro('at', fn($index) => $this->slice($index, 1)->first());
     }
 }

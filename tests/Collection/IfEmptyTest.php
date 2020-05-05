@@ -40,7 +40,7 @@ class IfEmptyTest extends TestCase
     /** @test */
     public function it_executes_the_callable_if_the_collection_is_empty()
     {
-        Collection::make()->ifEmpty(function () {
+        Collection::make()->ifEmpty(function() {
             $this->spy->someCall();
         });
 
@@ -52,7 +52,7 @@ class IfEmptyTest extends TestCase
     {
         $originCollection = Collection::make();
 
-        $originCollection->ifEmpty(function (Collection $collection) use ($originCollection) {
+        $originCollection->ifEmpty(function(Collection $collection) use ($originCollection) {
             $this->assertEquals($originCollection, $collection);
         });
     }
@@ -60,7 +60,7 @@ class IfEmptyTest extends TestCase
     /** @test */
     public function it_doesnt_execute_the_callable_if_the_collection_isnt_empty()
     {
-        Collection::make(['foo'])->ifEmpty(function () {
+        Collection::make(['foo'])->ifEmpty(function() {
             $this->spy->someCall();
         });
 
@@ -72,7 +72,7 @@ class IfEmptyTest extends TestCase
     {
         $collection = Collection::make();
 
-        $this->assertEquals($collection, $collection->ifEmpty(function () {
+        $this->assertEquals($collection, $collection->ifEmpty(function() {
         }));
     }
 }

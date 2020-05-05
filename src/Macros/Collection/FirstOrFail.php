@@ -13,7 +13,7 @@ class FirstOrFail
      **/
     public static function register() : void
     {
-        Collection::macro('firstOrFail', function () {
+        Collection::macro('firstOrFail', function() {
             if (! is_null($item = $this->first())) {
                 return $item;
             }

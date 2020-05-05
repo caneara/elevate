@@ -12,7 +12,7 @@ class Rotate
      **/
     public static function register() : void
     {
-        Collection::macro('rotate', function ($offset) {
+        Collection::macro('rotate', function($offset) {
             if ($this->isEmpty()) {
                 return new Collection;
             }

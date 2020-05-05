@@ -12,11 +12,11 @@ class Validate
      **/
     public static function register() : void
     {
-        Collection::macro('validate', function ($callback) {
+        Collection::macro('validate', function($callback) {
             if (is_string($callback) || is_array($callback)) {
                 $validationRule = $callback;
 
-                $callback = function ($item) use ($validationRule) {
+                $callback = function($item) use ($validationRule) {
                     if (! is_array($item)) {
                         $item = ['default' => $item];
                     }

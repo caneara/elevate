@@ -74,7 +74,7 @@ class SectionByTest extends TestCase
             ],
         ];
 
-        $this->assertEquals($expected, $sectioned->map(function ($section) {
+        $this->assertEquals($expected, $sectioned->map(function($section) {
             $section['items'] = $section['items']->toArray();
 
             return $section;
@@ -111,7 +111,7 @@ class SectionByTest extends TestCase
             ],
         ];
 
-        $this->assertEquals($expected, $sectioned->map(function ($section) {
+        $this->assertEquals($expected, $sectioned->map(function($section) {
             $section['items'] = $section['items']->toArray();
 
             return $section;

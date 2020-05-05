@@ -12,7 +12,7 @@ class None
      **/
     public static function register() : void
     {
-        Collection::macro('none', function ($key, $value = null) {
+        Collection::macro('none', function($key, $value = null) {
             if (func_num_args() === 2) {
                 return ! $this->contains($key, $value);
             }

@@ -12,6 +12,6 @@ class PluckToArray
      **/
     public static function register() : void
     {
-        Collection::macro('pluckToArray', fn ($value, $key = null) => $this->pluck($value, $key)->toArray());
+        Collection::macro('pluckToArray', fn($value, $key = null) => $this->pluck($value, $key)->toArray());
     }
 }
