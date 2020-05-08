@@ -55,11 +55,17 @@ return [
 
     // Stringable
     'Stringable' => [
+        'AppendIf'   => true,
+        'Collapse'   => true,
+        'Count'      => true,
         'Get'        => true,
+        'Insert'     => true,
         'PadLeft'    => true,
         'PadRight'   => true,
         'Possessive' => true,
+        'PrependIf'  => true,
         'Segment'    => true,
+        'ToArray'    => true,
         'Toggle'     => true,
     ],
 

@@ -55,11 +55,17 @@ The following macros are currently available:
 | -------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------
 | filled         | Blade      | Enables the use of @filled() and @endfilled. Uses the filled() global helper under the hood. You may also use @else e.g. @filled() @else @endfilled
 | blank          | Blade      | Enables the use of @blank() and @endblank. Uses the blank() global helper under the hood. You may also use @else e.g. @blank() @else @endblank
+| appendIf       | Stringable | Appends the given string to the string if it doesn't already finish with it
+| collapse       | Stringable | Trims the string and replaces multiple whitespace characters with a single space
+| count          | Stringable | Determine the total number of times the given string appears within the string
 | get            | Stringable | Adds a more friendly helper to access a fluent string's content e.g. Str::of('test')->get()
+| insert         | Stringable | Injects the given string at the given index
 | padLeft        | Stringable | Pad the string to the given length from the left side
 | padRight       | Stringable | Pad the string to the given length from the right side
 | possessive     | Stringable | Converts the string to a possessive version e.g. Bob -> Bob's
+| prependIf      | Stringable | Prepends the given string to the string if it doesn't already start with it
 | segment        | Stringable | Splits the string using the given delimiter, then retrieves the item at the given array index
+| toArray        | Stringable | Converts the string into an array of characters
 | toggle         | Stringable | Toggles the string between two states. Contains a $loose flag to allow the switching of a string that matches neither states
 | after          | Collection | Get the next item from the collection
 | at             | Collection | Retrieve an item at an index
