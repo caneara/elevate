@@ -20,13 +20,7 @@ class PadLeftTest extends TestCase
     /** @test */
     public function it_verifies_the_macro()
     {
-        $this->assertEquals('ŤOUŤOUŤŽLU', Str::of("\u{17D}LU")->padLeft(10, "\u{164}OU")->get());
-        $this->assertEquals('ŤOUŤOUŽLU', Str::of("\u{17D}LU")->padLeft(9, "\u{164}OU")->get());
-        $this->assertEquals('ŽLU', Str::of("\u{17D}LU")->padLeft(3, "\u{164}OU")->get());
-        $this->assertEquals('ŽLU', Str::of("\u{17D}LU")->padLeft(0, "\u{164}OU")->get());
-        $this->assertEquals('ŽLU', Str::of("\u{17D}LU")->padLeft(-1, "\u{164}OU")->get());
-        $this->assertEquals('ŤŤŤŤŤŤŤŽLU', Str::of("\u{17D}LU")->padLeft(10, "\u{164}")->get());
-        $this->assertEquals('ŽLU', Str::of("\u{17D}LU")->padLeft(3, "\u{164}")->get());
-        $this->assertEquals('       ŽLU', Str::of("\u{17D}LU")->padLeft(10)->get());
+        $this->assertEquals('       ABC', Str::of('ABC')->padLeft(10)->get());
+        $this->assertEquals('       ABC', Str::of('       ABC')->padLeft(10)->get());
     }
 }

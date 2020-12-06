@@ -20,13 +20,7 @@ class PadRightTest extends TestCase
     /** @test */
     public function it_verifies_the_macro()
     {
-        $this->assertEquals('ŽLUŤOUŤOUŤ', Str::of("\u{17D}LU")->padRight(10, "\u{164}OU")->get());
-        $this->assertEquals('ŽLUŤOUŤOU', Str::of("\u{17D}LU")->padRight(9, "\u{164}OU")->get());
-        $this->assertEquals('ŽLU', Str::of("\u{17D}LU")->padRight(3, "\u{164}OU")->get());
-        $this->assertEquals('ŽLU', Str::of("\u{17D}LU")->padRight(0, "\u{164}OU")->get());
-        $this->assertEquals('ŽLU', Str::of("\u{17D}LU")->padRight(-1, "\u{164}OU")->get());
-        $this->assertEquals('ŽLUŤŤŤŤŤŤŤ', Str::of("\u{17D}LU")->padRight(10, "\u{164}")->get());
-        $this->assertEquals('ŽLU', Str::of("\u{17D}LU")->padRight(3, "\u{164}")->get());
-        $this->assertEquals('ŽLU       ', Str::of("\u{17D}LU")->padRight(10)->get());
+        $this->assertEquals('ABC       ', Str::of('ABC')->padRight(10)->get());
+        $this->assertEquals('ABC       ', Str::of('ABC       ')->padRight(10)->get());
     }
 }
