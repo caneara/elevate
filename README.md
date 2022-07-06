@@ -25,6 +25,17 @@ Pull in the package using composer
 composer require mattkingshott/elevate
 ```
 
+## Promo
+
+I made [Lumeno](https://lumeno.dev) to help you centralize your IT résumé, project portfolio and blog content. It aids in building a following, allows you to discover other creatives, and helps you to get invited for relevant job vacancies. Best of all, it's core feature set is free! [Get Started...](https://lumeno.dev)
+
+<!-- Screenshot -->
+<p align="center">
+    <a target="_blank" href="https://lumeno.dev">
+        <img src="resources/promotion.png" alt="Lumeno" style="height:350px">
+    </a>
+</p>
+
 ## Configuration
 
 If you wish to make all of the macros available to your application, then you can skip this section. Otherwise, you should publish the configuration file using Artisan:
