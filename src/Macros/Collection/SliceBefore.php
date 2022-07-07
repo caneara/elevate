@@ -37,10 +37,10 @@ class SliceBefore
 
             return $this->eachCons(2, $preserveKeys)->reduce(function($sliced, $previousAndCurrent) use ($callback) {
                 $previousItem = $previousAndCurrent->take(1);
-                $item = $previousAndCurrent->take(-1);
+                $item         = $previousAndCurrent->take(-1);
 
-                $itemKey = $item->keys()->first();
-                $valuesItem = $item->first();
+                $itemKey            = $item->keys()->first();
+                $valuesItem         = $item->first();
                 $valuesPreviousItem = $previousItem->first();
 
                 $callback($valuesItem, $valuesPreviousItem)

@@ -15,7 +15,7 @@ class FromPairs
         Collection::macro('fromPairs', function() {
             return $this->reduce(function($assoc, $keyValuePair) {
                 [$key, $value] = $keyValuePair;
-                $assoc[$key] = $value;
+                $assoc[$key]   = $value;
 
                 return $assoc;
             }, new Collection);

@@ -17,7 +17,7 @@ class Segment
 
             if ($index < 0) {
                 $segments = array_reverse($segments);
-                $index = abs($index) - 1;
+                $index    = abs($index) - 1;
             }
 
             $segment = isset($segments[$index]) ? $segments[$index] : '';

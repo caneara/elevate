@@ -13,7 +13,7 @@ class EachCons
     public static function register() : void
     {
         Collection::macro('eachCons', function($chunkSize, $preserveKeys = false) {
-            $size = $this->count() - $chunkSize + 1;
+            $size   = $this->count() - $chunkSize + 1;
             $result = collect(range(0, $size))->reduce(function($result, $index) use ($chunkSize, $preserveKeys) {
                 $next = $this->slice($index, $chunkSize);
 
