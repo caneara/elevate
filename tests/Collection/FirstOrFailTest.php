@@ -5,7 +5,7 @@ namespace Elevate\Tests\Collection;
 use Elevate\ServiceProvider;
 use Orchestra\Testbench\TestCase;
 use Illuminate\Support\Collection;
-use Elevate\Exceptions\CollectionItemNotFound;
+use Illuminate\Support\ItemNotFoundException;
 
 class FirstOrFailTest extends TestCase
 {
@@ -29,7 +29,7 @@ class FirstOrFailTest extends TestCase
     /** @test */
     public function it_throws_exception_when_there_are_no_items()
     {
-        $this->expectException(CollectionItemNotFound::class);
+        $this->expectException(ItemNotFoundException::class);
 
         Collection::make()->firstOrFail();
     }
