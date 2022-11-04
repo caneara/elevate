@@ -12,6 +12,6 @@ class Blank
      **/
     public static function register() : void
     {
-        Blade::if('blank', fn($expression) => blank($expression));
+        Blade::if('blank', fn ($expression) => blank($expression));
     }
 }

@@ -12,6 +12,6 @@ class Count
      **/
     public static function register() : void
     {
-        Stringable::macro('count', fn($search) => mb_substr_count($this->__toString(), $search));
+        Stringable::macro('count', fn ($search) => mb_substr_count($this->__toString(), $search));
     }
 }

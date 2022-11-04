@@ -12,6 +12,6 @@ class Third
      **/
     public static function register() : void
     {
-        Collection::macro('third', fn() => $this->get(2));
+        Collection::macro('third', fn () => $this->get(2));
     }
 }

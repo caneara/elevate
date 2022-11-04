@@ -14,7 +14,7 @@ class Tail
     {
         Collection::macro(
             'tail',
-            fn($preserveKeys = false) =>
+            fn ($preserveKeys = false) =>
             ! $preserveKeys ? $this->slice(1)->values() : $this->slice(1)
         );
     }

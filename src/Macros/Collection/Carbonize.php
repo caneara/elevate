@@ -15,8 +15,8 @@ class Carbonize
     {
         Collection::macro(
             'carbonize',
-            fn() =>
-            collect($this->items)->map(fn($time) => new CarbonImmutable($time))
+            fn () =>
+            collect($this->items)->map(fn ($time) => new CarbonImmutable($time))
         );
     }
 }

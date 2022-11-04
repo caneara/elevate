@@ -12,6 +12,6 @@ class Filled
      **/
     public static function register() : void
     {
-        Blade::if('filled', fn($expression) => blank($expression));
+        Blade::if('filled', fn ($expression) => blank($expression));
     }
 }

@@ -17,7 +17,7 @@ class Extract
 
             return array_reduce(
                 $keys,
-                fn($extracted, $key) =>
+                fn ($extracted, $key) =>
                 $extracted->push(data_get($this->items, $key)),
                 new Collection()
             );

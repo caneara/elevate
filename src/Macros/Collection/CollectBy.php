@@ -12,6 +12,6 @@ class CollectBy
      **/
     public static function register() : void
     {
-        Collection::macro('collectBy', fn($key, $default = null) => new Collection($this->get($key, $default)));
+        Collection::macro('collectBy', fn ($key, $default = null) => new Collection($this->get($key, $default)));
     }
 }

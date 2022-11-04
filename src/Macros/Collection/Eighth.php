@@ -12,6 +12,6 @@ class Eighth
      **/
     public static function register() : void
     {
-        Collection::macro('eighth', fn() => $this->get(7));
+        Collection::macro('eighth', fn () => $this->get(7));
     }
 }

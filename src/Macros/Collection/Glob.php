@@ -12,6 +12,6 @@ class Glob
      **/
     public static function register() : void
     {
-        Collection::macro('glob', fn($pattern, $flags = 0) => Collection::make(glob($pattern, $flags)));
+        Collection::macro('glob', fn ($pattern, $flags = 0) => Collection::make(glob($pattern, $flags)));
     }
 }

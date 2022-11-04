@@ -12,6 +12,6 @@ class ToArray
      **/
     public static function register() : void
     {
-        Stringable::macro('toArray', fn() => str_split($this->__toString()));
+        Stringable::macro('toArray', fn () => str_split($this->__toString()));
     }
 }
