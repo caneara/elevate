@@ -1,16 +1,3 @@
-<!-- Screenshot -->
-<p align="center">
-    <img src="resources/example.png" alt="Code example">
-</p>
-
-<!-- Badges -->
-<p align="center">
-  <img src="resources/build.svg" alt="Build">
-  <img src="resources/coverage.svg" alt="Coverage">
-  <img src="resources/version.svg" alt="Version">
-  <img src="resources/license.svg" alt="License">
-</p>
-
 # Elevate
 
 This package provides a library of macro functions for various Laravel components. Use them to augment the existing functionality offered by the likes of Blade, Collections, Stringable, and so on.
@@ -22,7 +9,7 @@ Initially, only a handful of macros are available. That said, the library has be
 Pull in the package using composer
 
 ```bash
-composer require mattkingshott/elevate
+composer require caneara/elevate
 ```
 
 ## Configuration
@@ -112,10 +99,6 @@ The following macros are currently available:
 ## Contributing
 
 Thank you for considering a contribution to Elevate. You are welcome to submit a PR containing a new macro or improvements to existing ones, however please also be sure to include a test or tests where appropriate.
-
-## Support the project
-
-If you'd like to support the development of Elevate, then please consider [sponsoring me](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YBEHLHPF3GUVY&source=url). Thanks so much!
 
 ## Credits
 
