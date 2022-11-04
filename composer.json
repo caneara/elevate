@@ -1,5 +1,5 @@
 {
-    "name": "mattkingshott/elevate",
+    "name": "caneara/elevate",
     "description": "A package that provides a library of macro functions for various Laravel components.",
     "keywords": [
         "elevate",
@@ -9,7 +9,7 @@
     ],
     "type": "library",
     "license": "MIT",
-    "homepage": "https://github.com/mattkingshott/elevate",
+    "homepage": "https://github.com/caneara/elevate",
     "autoload": {
         "psr-4": {
             "Elevate\\": "src"
